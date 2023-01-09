@@ -4,11 +4,14 @@ package com.d.diego.apiAutorizacoes.controller;
 import com.d.diego.apiAutorizacoes.domain.Procedimento;
 import com.d.diego.apiAutorizacoes.enums.Autorizacao;
 import com.d.diego.apiAutorizacoes.enums.Sexo;
+import com.d.diego.apiAutorizacoes.repository.ProcedimentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/autorizador")
