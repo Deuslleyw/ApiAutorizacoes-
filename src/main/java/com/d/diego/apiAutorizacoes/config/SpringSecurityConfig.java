@@ -1,6 +1,9 @@
 package com.d.diego.apiAutorizacoes.config;
 
 
+import com.d.diego.apiAutorizacoes.jwt.JwtFilter;
+import com.d.diego.apiAutorizacoes.services.JwtService;
+import com.d.diego.apiAutorizacoes.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

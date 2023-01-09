@@ -2,6 +2,8 @@ package com.d.diego.apiAutorizacoes.controller;
 
 
 import com.d.diego.apiAutorizacoes.domain.UserAuth;
+import com.d.diego.apiAutorizacoes.services.JwtService;
+import com.d.diego.apiAutorizacoes.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
