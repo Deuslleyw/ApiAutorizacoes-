@@ -44,7 +44,7 @@ public class ProcedimentoController {
         }
     }
 
-    @GetMapping("/procedimento/{procedimento}/idade/{idade}/sexo/{sexo}")
+    @GetMapping("/autorizador/procedimento/{procedimento}/idade/{idade}/sexo/{sexo}")
     public ResponseEntity<Autorizacao> buscaProcedimento(@PathVariable("procedimento") Integer procedimento, @PathVariable("idade") Integer idade,
                                                          @PathVariable("sexo") String sexo) {
         try {
