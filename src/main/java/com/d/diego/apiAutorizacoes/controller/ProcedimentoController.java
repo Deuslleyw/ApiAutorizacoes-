@@ -5,6 +5,8 @@ import com.d.diego.apiAutorizacoes.domain.Procedimento;
 import com.d.diego.apiAutorizacoes.enums.Autorizacao;
 import com.d.diego.apiAutorizacoes.enums.Sexo;
 import com.d.diego.apiAutorizacoes.repository.ProcedimentoRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(name = "Api Autorizações")
 @RestController
 @RequestMapping("/autorizador")
 public class ProcedimentoController {
@@ -25,6 +28,7 @@ public class ProcedimentoController {
         return procedimentoRepositorio.findAll();
     }
 
+    @Operation(description = "Post new procedure / Admin")
     @PreAuthorize("hasAnyRole('ADMIN')")
     @PostMapping("/cadastro/procedimento/{procedimento}/idade/{idade}/sexo/{sexo}/autoriza/{autoriza}")
     public ResponseEntity<Procedimento> cadastroProcedimento(@PathVariable("procedimento") Integer procedimento, @PathVariable("idade") Integer idade,
@@ -44,6 +48,7 @@ public class ProcedimentoController {
         }
     }
 
+    @Operation(description = "Get procedure authorized")
     @GetMapping("/autorizador/procedimento/{procedimento}/idade/{idade}/sexo/{sexo}")
     public ResponseEntity<Autorizacao> buscaProcedimento(@PathVariable("procedimento") Integer procedimento, @PathVariable("idade") Integer idade,
                                                          @PathVariable("sexo") String sexo) {
