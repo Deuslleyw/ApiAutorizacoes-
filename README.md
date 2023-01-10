@@ -30,6 +30,12 @@ Ferramentas que utilizadas para criar o projeto
 
 * GetMethod: localhost:8080: "/autorizador/procedimento/{procedimento}/idade/{idade}/sexo/{sexo}"
 
+* Login: localhost:8080/"/api/auth"
+
+* Usuario ("Testes")
+
+* Senha Padrão ("12345")
+
 -------------------------------------------------------------------------------
  # Banco de dados
 
