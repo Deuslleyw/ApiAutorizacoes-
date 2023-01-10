@@ -47,7 +47,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
         protected void configure(HttpSecurity http) throws Exception {
             http.csrf().disable()
                     .authorizeRequests()
-                    .antMatchers("/api/auth/**"  ).permitAll()
+                    .antMatchers("/api/auth/**" ).permitAll()
                     .anyRequest().authenticated()
                     .and()
                     .sessionManagement()
